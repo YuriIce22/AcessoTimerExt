@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AcessoTimer</title>
 
+    <!-- Fonte para o título -->
+    <link href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap" rel="stylesheet">
+
+    <!-- Fonte para o relógio -->
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+    <!-- Fonte para o corpo -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -18,7 +28,7 @@
         AcessoTimer
         </header> <!-- Conteudo alunos -->
 
-        <div>AAAAAAAAAAAAAAAAAAA</div>
+        <div class="timer-view">00:00</div>
 
         <div class="btn-tempos">
             <button> 10 </button>
@@ -26,8 +36,9 @@
             <button> 30 </button>
         </div>
 
-        <input>
-
+        <div class="input-tempos">
+            <input type="number" name="number" id="input-number" class="input-number" maxlength="500" placeholder="Digite o número..." required>
+        </div>    
 
         <div class="container-button">
 	        <div class="btn-principais">	
@@ -42,11 +53,6 @@
 
             </div>
         </div>
-
-
-        <footer class="rodape">
-
-        </footer>
 
     </div>
 
