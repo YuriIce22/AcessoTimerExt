@@ -4,7 +4,13 @@
   box-sizing: border-box;
 
   /* Bordas View */
-border: 1px solid black;
+/* border: 1px solid black;  */
+}
+
+body{
+    color: white;
+    background: #2A7B9B;
+    background: linear-gradient(175deg, rgb(29, 208, 253) 0%, rgb(15, 11, 106) 100%);
 }
 
 .container-pai img {
@@ -13,12 +19,12 @@ border: 1px solid black;
 
 .container-pai {
   width: 400px;
-  height: 400px;
+  height: 500px;
 
   /* Flexbox */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
@@ -28,6 +34,72 @@ border: 1px solid black;
   width: 250px;
 }
 
+/* Corpo da Extensão */
+.timer-view{
+    background-color: white;
+    color: black;
+    width: 320px;
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+}
+
+.btn-tempos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 65px;
+    margin: 10px;
+}
+.btn-tempos button{
+    width: 60px;
+    height: 60px;
+    border-color: none;
+    border-radius: 50px;
+}
+
+.input-tempos{
+    margin: 10px;
+}
+.input-tempos input{
+    padding: 14px;
+    border-radius: 20px;
+    width: 290px;
+}
+
+.container-button {
+  margin-bottom: 3px;
+   margin-top: 3px;
+
+  /* FlexBox */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn-principais{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 55px;
+    row-gap: 7px;
+}
+
+.btn{
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 110px;
+    height: 50px;
+    border-radius: 30px; 
+    margin: 3px;
+}
 
 
 /* Cabeçalho */
@@ -41,12 +113,4 @@ border: 1px solid black;
   align-items: center;
   font-weight: 600;
   font-size: 1.3rem;
-}
-
-
-/* Rodapé */
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
