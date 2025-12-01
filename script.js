@@ -1,0 +1,102 @@
+const timerView = document.querySelector('.timer-view');
+const btnDesc = document.getElementById('btn-desc');
+const btnCresc = document.getElementById('btn-cresc');
+const btnIniciar = document.getElementById('btn-iniciar');
+const btnParar = document.getElementById('btn-parar');
+const inputNumber = document.getElementById('input-number');
+const btnLimpar = document.getElementById('btn-limpar');
+
+
+const quickButtons = document.querySelectorAll('.btn-tempos button');
+
+let timer = null;
+let time = 0;
+let modo = 'desc'; // desc ou cresc
+
+// Atualiza visual
+function atualizarTela() {
+    let min = Math.floor(time / 60);
+    let sec = time % 60;
+
+    timerView.textContent =
+        `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+}
+
+// ---- Seleção de botões CRESC/DESC ----
+function atualizarSelecaoModo() {
+    if (modo === 'desc') {
+        btnDesc.classList.add('selected');
+        btnCresc.classList.remove('selected');
+    } else {
+        btnCresc.classList.add('selected');
+        btnDesc.classList.remove('selected');
+    }
+}
+
+btnDesc.onclick = () => {
+    modo = 'desc';
+    atualizarSelecaoModo();
+};
+
+btnCresc.onclick = () => {
+    modo = 'cresc';
+    atualizarSelecaoModo();
+};
+
+// inicia com DESC selecionado
+atualizarSelecaoModo();
+// ---------------------------------------
+
+// Botões rápidos (10, 15, 30)
+quickButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        time = Number(btn.textContent) * 60;
+        atualizarTela();
+    });
+});
+
+// Iniciar
+btnIniciar.onclick = () => {
+    if (timer) return; // evita iniciar múltiplas vezes
+
+    // Se digitou algo no input
+    if (inputNumber.value) {
+        time = Number(inputNumber.value) * 60;
+        atualizarTela();
+    }
+
+    timer = setInterval(() => {
+        if (modo === 'desc') {
+            if (time > 0) {
+                time--;
+            } else {
+                clearInterval(timer);
+                timer = null;
+            }
+        } else { // crescente
+            time++;
+        }
+
+        atualizarTela();
+    }, 1000);
+};
+
+// Parar
+btnParar.onclick = () => {
+    clearInterval(timer);
+    timer = null;
+};
+
+btnLimpar.onclick = () => {
+    // Para o cronômetro
+    clearInterval(timer);
+    timer = null;
+
+    // Reseta tempo
+    time = 0;
+    atualizarTela();
+
+    // Limpa input
+    inputNumber.value = "";
+};
+

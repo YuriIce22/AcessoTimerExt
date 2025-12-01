@@ -15,11 +15,6 @@ body{
 /* border: 1px solid black;  */
 }
 
-body{
-    color: white;
-    background: #2A7B9B;
-    background: linear-gradient(175deg, rgb(29, 208, 253) 0%, rgb(15, 11, 106) 100%);
-}
 
 .container-pai img {
   width: 60px;
@@ -137,6 +132,14 @@ body{
     border: 1px solid white;
     color: black;
 }
+
+.selected {
+    background-color: rgb(20, 89, 114);
+    color: white;
+    border: 1px solid white;
+}
+
+
 
 
 /* Cabeçalho */
