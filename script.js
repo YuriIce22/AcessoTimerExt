@@ -15,11 +15,18 @@ let modo = 'desc'; // desc ou cresc
 
 // Atualiza visual
 function atualizarTela() {
-    let min = Math.floor(time / 60);
+    let dias = Math.floor(time / 86400);       // 1 dia = 86400s
+    let horas = Math.floor((time % 86400) / 3600);
+    let min = Math.floor((time % 3600) / 60);
     let sec = time % 60;
 
-    timerView.textContent =
-        `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+    if (dias > 0) {
+        timerView.textContent =
+            `${dias}d ${String(horas).padStart(2, '0')}:${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+    } else {
+        timerView.textContent =
+            `${String(horas).padStart(2, '0')}:${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+    }
 }
 
 // ---- Seleção de botões CRESC/DESC ----
