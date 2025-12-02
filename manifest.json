@@ -2,7 +2,7 @@
   "name": "AcessoTimer",
   "version": "1.0",
   "manifest_version": 3,
-  "description": "Esta extensão serve para cronometrar um periodo de tempo.",
+  "description": "Esta extensão serve para cronometrar um periodo de tempo, crescente ou descrecente, por um tempo fixo de 10, 15 ou 30 minutos ou como o usuário desejar.",
   "action": {
     "default_popup": "index.html",
     "default_icon": {

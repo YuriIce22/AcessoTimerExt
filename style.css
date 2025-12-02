@@ -22,7 +22,7 @@ body{
 }
 
 .container-pai {
-  width: 350px;
+  width: 360px;
   height:600px;
 
   /* Flexbox */
@@ -43,13 +43,13 @@ body{
 .timer-view{
     background-color: white;
     color: black;
-    width: 320px;
-    height: 100px;
+    width: 340px;
+    height: 135px;
     margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4rem;
+    font-size: 3.9rem;
 
     /* Fonte de Relogio */
     font-family: 'Orbitron', sans-serif;
@@ -138,6 +138,7 @@ body{
     color: white;
     border: 1px solid white;
 }
+
 
 
 
