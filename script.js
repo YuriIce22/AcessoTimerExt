@@ -107,3 +107,37 @@ btnLimpar.onclick = () => {
     inputNumber.value = "";
 };
 
+/* Menu de configurações */
+const btnConfig = document.getElementById('btn-config');
+const menuConfig = document.getElementById('menu-config');
+const btnBack = document.getElementById('btn-back');
+const themeSelect = document.getElementById('theme-select');
+const fontSizeInput = document.getElementById('font-size');
+
+// Abrir menu
+btnConfig.onclick = () => {
+    menuConfig.classList.add('show');
+};
+
+// Fechar menu
+btnBack.onclick = () => {
+    menuConfig.classList.remove('show');
+};
+
+// Alterar tema
+themeSelect.onchange = () => {
+    document.body.classList.remove('light', 'dark');
+    document.body.classList.add(themeSelect.value);
+};
+
+fontSizeInput.oninput = () => {
+    document.querySelectorAll('.ajustavel').forEach(container => {
+        container.querySelectorAll('*').forEach(el => {
+            if (el.tagName !== 'IMG') { // Ignora imagens
+                el.style.fontSize = fontSizeInput.value + 'px';
+            }
+        });
+    });
+};
+
+

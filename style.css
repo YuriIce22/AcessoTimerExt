@@ -12,7 +12,6 @@ body{
     color: white;
     background: #2A7B9B;
     background: linear-gradient(175deg, rgb(29, 208, 253) 0%, rgb(15, 11, 106) 100%);
-/* border: 1px solid black;  */
 }
 
 
@@ -89,6 +88,9 @@ body{
     width: 290px;
     font-size: 1.1rem;
 }
+.input-tempos::placeholder{
+    font-size: 5rem;
+}
 
 .container-button {
   margin-bottom: 3px;
@@ -133,12 +135,33 @@ body{
     color: black;
 }
 
+#btn-back{
+        border-radius: 5px;
+    padding: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 110px;
+    height: 50px;
+    border-radius: 30px; 
+    margin: 3px;
+
+    background-color: white;
+    border: 1px solid black;
+    font-weight: 600;
+    font-size: 1.20rem;
+    color: black;
+}
+#btn-back:hover{
+    background-color: rgb(31, 127, 161);
+    border: 1px solid white;
+    color: black;
+}
+
 .selected {
     background-color: rgb(20, 89, 114);
     color: white;
     border: 1px solid white;
 }
-
 
 
 
@@ -154,4 +177,88 @@ body{
   align-items: center;
   font-size: 1.1rem;
   font-family: "Stalinist One", sans-serif;
+}
+
+/* Botão de engrenagem no header */
+.btn-config {
+    margin-left: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Menu de configurações */
+.menu-config {
+    position: fixed;   /* Fica em cima de todo conteúdo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.95);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Mostra o menu */
+.menu-config.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Itens do menu */
+.menu-config .config-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 1rem;
+}
+
+.menu-config input, 
+.menu-config select {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+body.dark{
+    color: white;
+    background: linear-gradient(175deg, rgb(15, 11, 106) 0%, rgb(0, 0, 0)100%);
+}
+
+
+body.dark .timer-view {
+    background-color: #222;
+    color: #0ff;
+}
+
+body.dark .btn,
+body.dark .btn-tempos button,
+body.dark .input-tempos input {
+    background-color: #1f373f;
+    color: #fff;
+    border: 1px solid #ffffff;
+}
+
+body.dark button:hover{
+    background-color: #0ff;
+    border: 1px solid white;
+    color: black;
+}
+
+body.dark .selected {
+    background-color: rgb(5, 79, 105);
+    color: #0ff;
+    border: 1px solid white;
 }
