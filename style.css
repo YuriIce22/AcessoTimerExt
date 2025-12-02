@@ -2,10 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-      font-family: "Roboto", sans-serif;
-
-  /* Bordas View */
-/* border: 1px solid black;  */
+  font-family: "Roboto", sans-serif;
 }
 
 body{
@@ -71,6 +68,7 @@ body{
     font-weight: 600;
     font-size: 1.25rem;
     color: white;
+    cursor: pointer;
 }
 
 .btn-tempos button:hover{
@@ -127,6 +125,7 @@ body{
     font-weight: 600;
     font-size: 1.20rem;
     color: black;
+    cursor: pointer;
 }
 
 .btn-principais button:hover{
@@ -229,7 +228,7 @@ body{
     padding: 5px;
     border-radius: 5px;
     border: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 body.dark{
@@ -251,7 +250,8 @@ body.dark .input-tempos input {
     border: 1px solid #ffffff;
 }
 
-body.dark button:hover{
+body.dark .btn:hover,
+body.dark .btn-tempos button:hover{
     background-color: #0ff;
     border: 1px solid white;
     color: black;
