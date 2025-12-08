@@ -5,6 +5,8 @@ const btnIniciar = document.getElementById('btn-iniciar');
 const btnParar = document.getElementById('btn-parar');
 const inputNumber = document.getElementById('input-number');
 const btnLimpar = document.getElementById('btn-limpar');
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
 
 
 const quickButtons = document.querySelectorAll('.btn-tempos button');
@@ -140,4 +142,31 @@ fontSizeInput.oninput = () => {
     });
 };
 
+
+
+/* Alterar FAQ e Configurações */
+tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        tabContents.forEach(c => c.classList.add('hidden'));
+        document.getElementById('tab-' + target).classList.remove('hidden');
+    });
+});
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const answer = item.querySelector('.faq-answer');
+        const isOpen = answer.style.display === 'block';
+
+        document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+
+        if (!isOpen) answer.style.display = 'block';
+    });
+});
 

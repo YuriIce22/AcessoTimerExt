@@ -34,24 +34,116 @@
 
         <!-- Menu de configurações -->
         <div id="menu-config" class="menu-config">
-            <h2>Configurações</h2>
-            
-            <div class="config-item">
-                <label for="theme-select">Tema:</label>
-                <select id="theme-select">
-                    <option value="light">Claro</option>
-                    <option value="dark">Escuro</option>
-                </select>
-            </div>
 
-            <div class="config-item">
-                <label for="font-size">Tamanho da fonte:</label>
-                <input type="number" id="font-size" min="12" max="48" value="16">
-            </div>
+    <!-- Botões superiores (AGORA 3 ABAS) -->
+    <div class="tabs-config">
+        <button class="tab-btn active" data-tab="config">Configurações</button>
+        <button class="tab-btn" data-tab="faq">FAQ</button>
+        <button class="tab-btn" data-tab="solucoes">Soluções</button>
+    </div>
 
-            <button id="btn-back">Voltar</button>
+    <!-- ABA CONFIGURAÇÕES -->
+    <div class="tab-content" id="tab-config">
+        <h2>Configurações</h2>
+
+        <div class="config-item">
+            <label for="theme-select">Tema:</label>
+            <select id="theme-select">
+                <option value="light">Claro</option>
+                <option value="dark">Escuro</option>
+            </select>
         </div>
-        <a></a>
+
+        <div class="config-item">
+            <label for="font-size">Tamanho da fonte:</label>
+            <input type="number" id="font-size" min="12" max="48" value="16">
+        </div>
+
+        <button id="btn-back">Voltar</button>
+    </div>
+
+    <!-- ABA FAQ -->
+    <div class="tab-content hidden" id="tab-faq">
+        <h2>Perguntas Frequentes</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">1. O que é o AcessoTimer?</div>
+            <div class="faq-answer">O AcessoTimer é uma extensão de cronômetro acessível desenvolvida para pessoas com baixa visão, daltonismo e idosos, oferecendo alto contraste, fonte ampliada e interface simples.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">2. Em quais navegadores eu posso usar?</div>
+            <div class="faq-answer">A extensão é projetada prioritariamente para Google Chrome, mas funciona também em navegadores Chromium.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">3. É preciso pagar para usar?</div>
+            <div class="faq-answer">Não. Todo o projeto utiliza recursos gratuitos e é totalmente sem custo.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">4. O cronômetro salva o histórico?</div>
+            <div class="faq-answer">Não. Para garantir simplicidade e privacidade, nenhum histórico é salvo.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">5. É preciso estar conectado à internet?</div>
+            <div class="faq-answer">Não. O AcessoTimer funciona totalmente offline.</div>
+        </div>
+    </div>
+
+    <!-- ABA SOLUÇÕES DE PROBLEMAS -->
+    <div class="tab-content hidden" id="tab-solucoes">
+        <h2>Soluções de Problemas</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">1. A extensão não aparece no navegador.</div>
+            <div class="faq-answer">Verifique se ela foi devidamente instalada.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">2. O cronômetro não inicia.</div>
+            <div class="faq-answer">
+                Veja se um tempo foi digitado ou selecionado.<br><br>
+                Certifique-se de que não há caracteres inválidos no campo de entrada.<br><br>
+                Clique em Limpar e tente inserir novamente o tempo.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">3. O tempo está indo na direção errada.</div>
+            <div class="faq-answer">Verifique se Crescente ou Decrescente está corretamente selecionado antes de iniciar.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">4. A interface parece desformatada.</div>
+            <div class="faq-answer">Atualize a página do pop-up da extensão.<br><br>Reinstale a extensão caso o erro persista.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">5. O cronômetro para sozinho ou trava.</div>
+            <div class="faq-answer">
+                Certifique-se de que o navegador não está bloqueando scripts.<br><br>
+                Veja se há outras extensões interferindo.<br><br>
+                Feche o pop-up e abra novamente pelo ícone da extensão.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">6. Não consigo digitar o tempo.</div>
+            <div class="faq-answer">
+                Clique no campo de entrada antes de digitar.<br><br>
+                Apenas números inteiros são aceitos.<br><br>
+                Se o campo estiver travado, clique em Limpar.
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
 
         </header> <!-- Conteudo alunos -->
 
