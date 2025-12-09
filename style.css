@@ -18,8 +18,8 @@ body{
 }
 
 .container-pai {
-  width: 360px;
-  height:600px;
+  width: 460px;
+  height:700px;
 
   /* Flexbox */
   display: flex;
